@@ -224,27 +224,27 @@ module WillFilter
     end
   
     def default_order
-      'id'
+     'leave_id'
     end
     
     def order
-      @order ||= default_order
-      @order = default_order unless contains_column?(@order.to_sym)
-      @order
+     @order ||= default_order
+     @order = default_order unless contains_column?(@order.to_sym)
+     @order
     end
     
     def default_order_type
-      'desc'
+    'desc'
     end
   
     def order_type
-      @order_type ||= default_order_type
-      @order_type = default_order_type unless ['asc', 'desc'].include?(@order_type.to_s)
-      @order_type
+     @order_type ||= default_order_type
+     @order_type = default_order_type unless ['asc', 'desc'].include?(@order_type.to_s)
+     @order_type
     end
   
     def order_clause
-      "#{order} #{order_type}"
+     "#{order} #{order_type}"
     end
   
     def column_sorted?(key)
