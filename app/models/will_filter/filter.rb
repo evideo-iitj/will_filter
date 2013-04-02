@@ -224,7 +224,7 @@ module WillFilter
     end
   
     def default_order
-     'leave_id'
+     'id'
     end
     
     def order
